@@ -24,8 +24,6 @@ esphome:
 preferences:
   flash_write_interval: "24h"
 
-captive_portal:
-
 api:
   actions:
     - action: read
