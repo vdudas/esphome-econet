@@ -13,6 +13,7 @@ substitutions:
   econet_alarm_history_update_interval: 60s
   mcu_connected_timeout: ${econet_update_interval}
   wifi_module_address: "0x340"
+
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
@@ -23,9 +24,7 @@ esphome:
     version: v3.7.0
 preferences:
   flash_write_interval: "24h"
-wifi:
-  ap:
-captive_portal:
+
 api:
   actions:
     - action: read
@@ -111,10 +110,6 @@ sensor:
     accuracy_decimals: 0
     icon: "mdi:alert"
     state_class: "measurement"
-  - platform: wifi_signal
-    name: "WiFi Signal Strength"
-    id: wifi_signal_sensor
-    entity_category: "diagnostic"
 text_sensor:
   - platform: econet
     name: "Alarm 1"
